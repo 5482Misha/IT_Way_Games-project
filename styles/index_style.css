@@ -1,9 +1,14 @@
 
+/*-------для общего стиля---------*/
+
 body {
     background-color: #656565;
     width: 1920;
     height: 1080;
 }
+
+
+/*-------для index.html---------*/
 
 
 .window {
@@ -78,7 +83,6 @@ position: absolute;
     margin-left: 50px;
     position:absolute;
     border-style: none;
-    background-color: #fff;
 }
 .submit{ 
     width: 373px;
