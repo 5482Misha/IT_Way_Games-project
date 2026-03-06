@@ -1,19 +1,21 @@
 
 body {
     background-color: #656565;
-    width: 1920;
-    height: 1080;
+    width: 1920px;
+    height: 1080px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .window {
     background-color: #fff;
     width: 476px;
-    height: 419px;
+    height: 521px;
     border-radius: 40px;
-    margin-right: auto;
     margin-left: auto;
-    margin-top: 302px;
-    position:relative;
+    margin-top: 225px;
+    position:absolute;
 }
 .title1 {
     color: #000;
