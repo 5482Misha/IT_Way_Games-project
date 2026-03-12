@@ -1,107 +1,128 @@
-
-/*-------для общего стиля---------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    background-color: #656565;
-    width: 99%;
-    height: 99%;
+    background: #656565;
+    min-height: 100vh;
+    font-family: system-ui, -apple-system, sans-serif;
     display: flex;
-    position: absolute;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
-
-
-/*-------для index.html---------*/
-
 
 .window {
-    background-color: #fff;
-    width: 24.79%;
-    min-width: 300px;
-    height: 52.46vh;
-    min-height: 400px;
-    border-radius: 40px;
-    margin-right: auto;
-    margin-left: auto;
-    position:absolute;
+    background: white;
+    width: 100%;
+    max-width: 420px;         
+    min-width: 320px;
+    border-radius: 24px;
+    padding: 40px 24px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.22);
 }
+
 .title1 {
+    font-size: 2.1rem;
+    font-weight: 600;
     color: #000;
-    width: 100%;
     text-align: center;
-    height: 5px;
-    margin-top: 13.43%;
+    margin-bottom: 2.2rem;
+}
+
+.forma {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.gmail_form,
+.pass_form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+}
+
+.gmail_label,
+.pass_label {
+    font-size: 0.98rem;
+    font-weight: 500;
+    color: #333;
+    margin-left: 4px;
     
-    /* position:absolute; */
 }
-.forma{
-    height: 100%;
+
+.gmail_input,
+.pass_input {
     width: 100%;
-}
-.gmail_form{
-    width: 75.84%;
-    height: 17.66%;
-    /* position:absolute; */
-    margin-top: 11.35%;
-    margin-left: 12.08%;
-
-}
-
-.pass_form{
-    width: 75.84%;
-    height: 17.66%;
-    /* position: absolute; */
-    margin-top: 4.45%;
-    margin-left: 12.08%;
+    height: 56px;
+    padding: 0 1.4rem;
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 999px;
+    font-size: 1.05rem;
+    transition: all 0.18s;
 }
 
+.gmail_input:focus,
+.pass_input:focus {
+    outline: none;
+    border-color: #ff8532;
+    box-shadow: 0 0 0 3px rgba(255, 133, 50, 0.18);
+    background: white;
+}
 
-/* .gmail_label{
-position: absolute;
-}
-.pass_label{
-position: absolute;
-} */
-.gmail_input{
-    /* position: absolute; */
-    background-color: #FCFCFC;
-    border-radius: 50px;
-    width: 90%;
-    height: 55px;
-    padding-inline: 5%;
-    margin-top: 6.72%;
-    border-style: none;
-}
-.pass_input{
-    /* position: absolute; */
-    background-color: #FCFCFC;
-    border-radius: 50px;
-    width: 90%;
-    padding-inline: 5%;
-    height: 55px;
-    margin-top: 6.75%;
-    border-style: none;
-}
-.res{
-    color: #1B1B1B;
+.res {
+    color: #444;
+    font-size: 0.94rem;
     text-decoration: none;
-    width: 50%;
-    height: 50px;    
-    margin-top: 9.4%;
-    margin-left: 12.08%;
-    position:absolute;
-    border-style: none;
+    align-self: flex-start;
+    margin-top: 0.4rem;
+    transition: color 0.2s;
 }
-.submit{ 
-    width: 78.36%;
-    height: 10.55%;
-    margin-top: 21.1%;
-    margin-left: 10.82%;
-    border-radius: 50px;
-    border-width: 0;
-    background-color: #FF8532;
-    color: #FCFCFC;
-    position: absolute;
-    text-align: center;
+
+.res:hover {
+    color: #ff8532;
+}
+
+.submit {
+    height: 56px;
+    margin-top: 1.2rem;
+    background: #FF8532;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.22s;
+}
+
+.submit:hover {
+    background: #ff7420;
+    transform: translateY(-1px);
+}
+
+.submit:active {
+    transform: translateY(0);
+}
+
+/* Адаптивность — мелкие экраны */
+@media (max-width: 480px) {
+    .window {
+        padding: 32px 20px;
+        border-radius: 20px;
+    }
+
+    .title1 {
+        font-size: 1.9rem;
+        margin-bottom: 2rem;
+    }
+
+    .submit {
+        height: 52px;
+        font-size: 1.05rem;
+    }
 }
