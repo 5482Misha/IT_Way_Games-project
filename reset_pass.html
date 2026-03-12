@@ -3,20 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Reset Password</title>
     <link rel="stylesheet" href="styles/rep1.css">
 </head>
 <body>
-    <div class="window"> 
+    <div class="window">
         <h1 class="title1">Reset password</h1>
+        
         <form action="/submit" method="post">
-          <div class="gmail_form">
-               <label class="gmail_label" for="gmail">Email</label>
-               <input class="gmail_input" type="text" id="gmail" name="gmail" placeholder="you@example.com" required>
-          </div>
-          <input class="submit" value="Confirm reset password">
-          <a href="index.html" class="res"> Back to sign in</a>
-</form>
-     </div>
+            <div class="gmail_form">
+                <label class="gmail_label" for="gmail">Email</label>
+                <input 
+                    class="gmail_input" 
+                    type="email" 
+                    id="gmail" 
+                    name="email" 
+                    placeholder="you@example.com" 
+                    required 
+                    autocomplete="email"
+                >
+            </div>
+
+            <button type="submit" class="submit">
+                Confirm reset password
+            </button>
+        </form>
+
+        <a href="index.html" class="res">Back to sign in</a>
+    </div>
 </body>
 </html>

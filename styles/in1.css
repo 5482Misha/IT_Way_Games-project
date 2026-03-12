@@ -64,6 +64,7 @@ body {
     border-radius: 999px;
     font-size: 1.05rem;
     transition: all 0.18s;
+    border-width: 0;
 }
 
 .gmail_input:focus,
